@@ -1,9 +1,27 @@
 <header>
-  Hello this is my Sports Mart TypeScript app
+  Header where navigation will be held, thinking we'll need either a sidebar or header for pages being 
+  (Dashboard Check In, Checkout, Cash Out)
 </header>
 <section>
-  This is the body text for my app
+  For the time being let's just put 4 buttons that navigate to the 4 options
+  <button routerLink="/dashboard">
+    <i cla ss="fa fa-share-square"></i>
+    Dashboard
+  </button>
+  <button routerLink="/check-in">
+    <i cla ss="fa fa-share-square"></i>
+    Check-in
+  </button>
+  <button routerLink="/checkout">
+    <i class="fa fa-chart-line"></i>
+    Checkout
+  </button>
+<button routerLink="/cash-out">
+    <i class="fa fa-chart-line"></i>
+    Cash Out
+  </button>
+  <router-outlet></router-outlet>
 </section>
 <footer>
-  Hello this is the footer
+  Copyright Ryab Greenbob 2020
 </footer>
