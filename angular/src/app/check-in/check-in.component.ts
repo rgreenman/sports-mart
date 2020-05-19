@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CheckInComponent implements OnInit {
 
+	donor: any = {};
+
   constructor() { }
 
   ngOnInit(): void {
+  	this.donor = {
+		name: '',
+		phoneNumber: ''
+	};
+  }
+
+  onSubmit() {
+  	console.log(this.donor);
   }
 
 }
