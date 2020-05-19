@@ -1,3 +1,18 @@
+:host {
+	position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    top: 0;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+
+    > section {
+    	height: 100%;
+    }
+}
+
 .title {
 	> h4 {
 		color: black;
