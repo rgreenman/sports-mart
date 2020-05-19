@@ -1,12 +1,5 @@
 <header class="title">
-  <h4>
-  Header where navigation will be held, thinking we'll need either a sidebar or header for pages being 
-  (Dashboard Check In, Checkout, Cash Out)
-  </h4>
-</header>
-<section>
-  For the time being let's just put 4 buttons that navigate to the 4 options
-  <button routerLink="/dashboard">
+    <button class="button" routerLink="/dashboard">
     <i cla ss="fa fa-share-square"></i>
     Dashboard
   </button>
@@ -18,10 +11,18 @@
     <i class="fa fa-chart-line"></i>
     Checkout
   </button>
-<button routerLink="/cash-out">
+    <button class="button" routerLink="/cash-out">
     <i class="fa fa-chart-line"></i>
     Cash Out
   </button>
+  <h4>
+      Sports Mart
+  <!--Header where navigation will be held, thinking we'll need either a sidebar or header for pages being -->
+  <!--(Dashboard Check In, Checkout, Cash Out)-->
+  </h4>
+</header>
+<section>
+  <!--For the time being let's just put 4 buttons that navigate to the 4 options-->
   <router-outlet></router-outlet>
 </section>
 <footer>
