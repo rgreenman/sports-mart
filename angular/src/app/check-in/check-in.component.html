@@ -1,18 +1,2 @@
 <h3>Check-in</h3>
-
-<section> Donor Information
-	<form (ngSubmit)="onSubmit()" #donorForm="ngForm">
-		<div>
-			<label for="name">Name</label>
-			<input type="text" id="name" required [(ngModel)]="donor.name" name="name">
-		</div>
-
-		<div>
-			<label for="phoneNumber">Phone Number</label>
-			<input type="text" id="phoneNumber" required [(ngModel)]="donor.phoneNumber" name="phoneNumber">
-		</div>
-
-		<button type="submit" [disabled]="!donorForm.form.valid">Submit</button>
-		<button type="button" (click)="donorForm.reset()">Clear</button>
-	</form>
-</section>
+<router-outlet></router-outlet>

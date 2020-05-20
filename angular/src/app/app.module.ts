@@ -4,9 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { CheckoutComponent } from './checkout/checkout.component';
+
 import { CashOutComponent } from './cash-out/cash-out.component';
+
 import { CheckInComponent } from './check-in/check-in.component';
+import { CheckInSellerComponent } from './check-in/check-in-seller.component';
+import { CheckInItemComponent } from './check-in/check-in-item.component';
+import { CheckInFinalizeComponent } from './check-in/check-in-finalize.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
@@ -15,6 +22,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CheckoutComponent,
     CashOutComponent,
     CheckInComponent,
+    CheckInSellerComponent,
+    CheckInItemComponent,
+    CheckInFinalizeComponent,
     DashboardComponent
   ],
   imports: [
