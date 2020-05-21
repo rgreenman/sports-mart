@@ -1,0 +1,38 @@
+<section> Seller's Items
+	<form (ngSubmit)="onItemSubmit()" #sellersItems="ngForm">
+		<div>
+			<label for="name">Name</label>
+			<input type="text" id="name" required [(ngModel)]="item.name" name="name">
+		</div>
+		<div>
+			<label for="price">Price</label>
+			<input type="text" id="price" required [(ngModel)]="item.price" name="price">
+		</div>
+		<div>
+			<label for="description">Description</label>
+			<textarea type="text" id="description" rows="3" cols="25" required [(ngModel)]="item.description" name="description"></textarea>
+		</div>
+		<div>
+			<label for="category">Category</label>
+			<select id="category"
+                required
+                [(ngModel)]="item.category" name="category"
+                #category="ngModel">
+          <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+        </select>
+		</div>
+		<div>
+			<label for="barcode">Barcode</label>
+			<button type="button" class="button" (click)="scanBarcode()">Scan Barcode</button>
+			<input type="text" id="barcode" required [(ngModel)]="item.barcode" name="barcode">
+		</div>
+
+		<button type="submit" [disabled]="!sellersItems.form.valid">Submit</button>
+		<button type="button" (click)="sellersItems.reset()">Clear</button>
+	</form>
+</section>
+
+<button type="button" routerLink="../check-in-seller">Previous
+</button>
+<button type="button" routerLink="../check-in-finalize">Next
+</button>

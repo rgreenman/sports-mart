@@ -1,0 +1,37 @@
+<section> Seller's Information
+	<form (ngSubmit)="onSellerSubmit()" #sellersInformationForm="ngForm">
+		<div>
+			<label for="name">Name</label>
+			<input type="text" id="name" required [(ngModel)]="seller.name" name="name">
+		</div>
+
+		<div>
+			<label for="phoneNumber">Phone Number</label>
+			<input type="text" id="phoneNumber" required [(ngModel)]="seller.phoneNumber" name="phoneNumber">
+		</div>
+
+		Address
+		<div>
+			<label for="streetAddress">Street</label>
+			<input type="text" id="streetAddress" required [(ngModel)]="seller.streetAddress" name="streetAddress">
+		</div>
+		<div>
+			<label for="city">City</label>
+			<input type="text" id="city" required [(ngModel)]="seller.city" name="city">
+		</div>
+		<div>
+			<label for="state">State</label>
+			<input type="text" id="state" required [(ngModel)]="seller.state" name="state">
+		</div>
+		<div>
+			<label for="zipCode">Zip Code</label>
+			<input type="text" id="zipCode" required [(ngModel)]="seller.zipCode" name="zipCode">
+		</div>
+
+		<button type="submit" [disabled]="!sellersInformationForm.form.valid">Submit</button>
+		<button type="button" (click)="sellersInformationForm.reset()">Clear</button>
+	</form>
+</section>
+
+<button type="button" routerLink="../check-in-item">Next
+</button>
