@@ -28,10 +28,7 @@
 			<input type="text" id="zipCode" required [(ngModel)]="seller.zipCode" name="zipCode">
 		</div>
 
-		<button type="submit" [disabled]="!sellersInformationForm.form.valid">Submit</button>
 		<button type="button" (click)="sellersInformationForm.reset()">Clear</button>
+		<button type="submit" [disabled]="!sellersInformationForm.form.valid">Submit</button>
 	</form>
 </section>
-
-<button type="button" routerLink="../check-in-item">Next
-</button>

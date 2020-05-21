@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Seller, Item } from './check-in-dtos';
+import { CheckInService } from './check-in.service';
 
 @Component({
   selector: 'app-check-in-finalize',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class CheckInFinalizeComponent {
 
-  constructor() { }
+  constructor(private checkinService: CheckInService) { }
 
+  seller: Seller;
+  itemList: Item[];
+
+  ngOnInit() {
+  	this.seller = this.checkinService.getSeller();
+	this.itemList = this.checkinService.getItems();
+  }
 }

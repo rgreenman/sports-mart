@@ -27,8 +27,8 @@
 			<input type="text" id="barcode" required [(ngModel)]="item.barcode" name="barcode">
 		</div>
 
-		<button type="submit" [disabled]="!sellersItems.form.valid">Submit</button>
 		<button type="button" (click)="sellersItems.reset()">Clear</button>
+		<button type="submit" [disabled]="!sellersItems.form.valid">Submit</button>
 	</form>
 </section>
 

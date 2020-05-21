@@ -20,4 +20,14 @@ export class Item {
 		public sellerId: number,
 		public sold: boolean,
 	) {}
+
+	clear() {
+		this.name = '';
+		this.price = undefined;
+		this.category = '';
+		this.description = '';
+		this.barcode = undefined;
+		this.sellerId = undefined;
+		this.sold = false;
+	}
 }

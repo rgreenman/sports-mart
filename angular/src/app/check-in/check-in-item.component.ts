@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Item } from './check-in-dtos';
+import { CheckInService } from './check-in.service';
 
 @Component({
   selector: 'app-check-in-item',
@@ -8,18 +10,17 @@ import { Item } from './check-in-dtos';
 })
 export class CheckInItemComponent {
 
-  constructor() { }
+  constructor(private checkInService: CheckInService,
+    private router: Router, private route: ActivatedRoute) { }
 
   categories = ['Baseball', 'Boots', 'Football','Soccer', 'Golf', 'Hockey',
    'Wrestling', 'Clothing', 'Skiing', 'Snowboarding', 'Other'];
 
-  item = new Item('', undefined, '', '', undefined, 0, false);
-  itemList: Item[] = [];
+   item = this.checkInService.getItem();
 
   onItemSubmit() {
-  	console.log(this.item);
-  	this.itemList.push(this.item);
-  	this.item = new Item('', undefined, '', '', undefined, 0, false);
+    this.checkInService.addItem(this.item);
+    this.item = new Item('', undefined, '', '', undefined, undefined, false);
   }
 
   scanBarcode() {

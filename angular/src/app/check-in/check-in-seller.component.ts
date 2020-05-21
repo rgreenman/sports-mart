@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Seller } from './check-in-dtos';
+import { CheckInService } from './check-in.service';
 
 @Component({
   selector: 'app-check-in-seller',
@@ -8,11 +10,13 @@ import { Seller } from './check-in-dtos';
 })
 export class CheckInSellerComponent {
 
-  constructor() { }
+  constructor(private checkInService: CheckInService,
+  	private router: Router, private route: ActivatedRoute) { }
 
-  seller = new Seller('', '', '', '', '', '');
+  seller = this.checkInService.getSeller();
 
   onSellerSubmit() {
-  	console.log(this.seller);
+  	this.checkInService.setSeller(this.seller);
+  	this.router.navigate(['../check-in-item'], { relativeTo: this.route });
   }
 }
