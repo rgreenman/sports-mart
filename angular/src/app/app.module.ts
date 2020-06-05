@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,7 @@ import { CheckInItemComponent } from './check-in/check-in-item.component';
 import { CheckInFinalizeComponent } from './check-in/check-in-finalize.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { BarcodeScannerComponent } from './dialog/barcode-scanner/barcode-scanner.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CheckInSellerComponent,
     CheckInItemComponent,
     CheckInFinalizeComponent,
-    DashboardComponent
+    DashboardComponent,
+    BarcodeScannerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    NgbModule,
+    FormsModule,
+    ZXingScannerModule
+  ],
+  entryComponents: [
+    BarcodeScannerComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,13 +21,13 @@ export class Item {
 		public sold: boolean,
 	) {}
 
-	clear() {
-		this.name = '';
-		this.price = undefined;
-		this.category = '';
-		this.description = '';
-		this.barcode = undefined;
-		this.sellerId = undefined;
-		this.sold = false;
-	}
+	// clear() {
+	// 	this.name = '';
+	// 	this.price = undefined;
+	// 	this.category = '';
+	// 	this.description = '';
+	// 	this.barcode = undefined;
+	// 	this.sellerId = undefined;
+	// 	this.sold = false;
+	// }
 }

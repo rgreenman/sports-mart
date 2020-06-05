@@ -24,9 +24,6 @@ const routes: Routes = [
       {path: 'check-in-finalize', component: CheckInFinalizeComponent },
     ]
   },
-	// { path: 'check-in-seller', component: CheckInSellerComponent },
-	// { path: 'check-in-item', component: CheckInItemComponent },
-	// { path: 'check-in-finalize', component: CheckInFinalizeComponent },
 	{ path: 'checkout', component: CheckoutComponent },
 	{ path: 'cash-out', component: CashOutComponent },
 ];
