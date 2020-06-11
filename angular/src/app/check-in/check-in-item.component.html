@@ -1,5 +1,98 @@
 <section> Seller's Items
 	<form (ngSubmit)="onItemSubmit()" #sellersItems="ngForm">
+		<div id="description_table" style=" float:right!important;">
+		<table style="width: 25%"> 
+			<tr>
+				<th>Item Code</th>
+				<th>Descriptions</th>
+				<th>Item Code</th>
+				<th>Descriptions</th>
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">1</button></td>
+				<td>DH SKI</td>
+				<td><button (click) = "descript.emit()">14</button></td>
+				<td>HELMETS</td>
+				<!--<app-check-in-item
+				(descript)="onDescript()">
+			</app-check-in-item> #FIXME this is what doesn't work
+			Need to also include (click) = "descript.emit()" on button-->
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">2</button></td>
+				<td>DH BOOT</td>
+				<td><button (click) = "descript.emit()">15</button></td>
+				<td>CAMPING</td>
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">3</button></td>
+				<td>XC SKI</td>
+				<td><button (click) = "descript.emit()">16</button></td>
+				<td>BIKING</td>
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">4</button></td>
+				<td>XC SHOE</td>
+				<td><button (click) = "descript.emit()">17</button></td>
+				<td>GOLF</td>
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">5</button></td>
+				<td>SKI POLE</td>
+				<td><button (click) = "descript.emit()">18</button></td>
+				<td>BASEBALL</td>
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">6</button></td>
+				<td>SKI MISC</td>
+				<td><button (click) = "descript.emit()">19</button></td>
+				<td>LACROSSE</td>
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">7</button></td>
+				<td>SNOWBOARD</td>
+				<td><button (click) = "descript.emit()">20</button></td>
+				<td>SOCCER</td>
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">8</button></td>
+				<td>SNOWBOARD BOOT</td>
+				<td><button (click) = "descript.emit()">21</button></td>
+				<td>EXERCISE EQUIPMENT</td>
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">9</button></td>
+				<td>SNOWBOARD MISC</td>
+				<td><button (click) = "descript.emit()">22</button></td>
+				<td>CLOTHING</td>
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">10</button></td>
+				<td>FIGURE SKATES</td>
+				<td><button (click) = "descript.emit()">23</button></td>
+				<td>GLOVES</td>
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">11</button></td>
+				<td>HOCKEY SKATES</td>
+				<td><button (click) = "descript.emit()">24</button></td>
+				<td>SHOES</td>
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">12</button></td>
+				<td>HOCKEY MISC</td>
+				<td><button (click) = "descript.emit()">25</button></td>
+				<td>MISC</td>
+			</tr>
+			<tr>
+				<td><button (click) = "descript.emit()">13</button></td>
+				<td>ROLLER SKATES/BLADES</td>
+				<td>26</td>
+				<td>TBD</td>
+			</tr>
+		</table>
+		
+	</div>
 		<div>
 			<label for="name">Name</label>
 			<input type="text" id="name" required [(ngModel)]="item.name" name="name">

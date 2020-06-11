@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Item } from './check-in-dtos';
 import { CheckInService } from './check-in.service';
@@ -27,7 +27,7 @@ export class CheckInItemComponent {
   }
 
   scanBarcode() {
-  	console.log("Take picture of barcode");
+    console.log("Take picture of barcode");
     const modalRef = this.modalService.open(BarcodeScannerComponent);
 
     modalRef.result.then((barcode) => {
@@ -35,5 +35,18 @@ export class CheckInItemComponent {
     }, (reject) => {
 
     }); 
+
+    
+
   }
+  /*
+  Cannot get this to work. Trying to make the click input into the description.
+  Check first row in table on HTML
+  Inserting that call makes the website time out
+  */
+  @Output() descript = new EventEmitter();
+
+  //onDescript() {
+      //window.alert('Button selected correctly -- #FIXME push this info into the description box');
+  //}
 }
