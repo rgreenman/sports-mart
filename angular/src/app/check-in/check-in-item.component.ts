@@ -16,15 +16,30 @@ export class CheckInItemComponent {
     private router: Router, private route: ActivatedRoute,
     private modalService: NgbModal,) { }
 
-  categories = ['Baseball', 'Boots', 'Football','Soccer', 'Golf', 'Hockey',
-   'Wrestling', 'Clothing', 'Skiing', 'Snowboarding', 'Other'];
+  categories = ['DH SKI', 'DH BOOT', 'XC SKI', 'XC SHOE', 'SKI POLE', 'SKI MISC', 'SNOWBOARD',
+  'SNOWBOARD BOOT', 'SNOWBOARD MISC', 'FIGURE SKATES', 'HOCKEY SKATES',
+  'HOCKEY MISC', 'ROLLER SKATES/BLADES', 'HELMETS', 'CAMPING', 'BIKING',
+  'GOLF', 'BASEBALL', 'LACROSSE', 'SOCCER', 'EXERCISE EQUIPMENT',
+  'CLOTHING', 'GLOVES', 'SHOES', 'MISC'];
 
    item = this.checkInService.getItem();
 
+  selectItemCode(code) {
+    console.log('Hit');
+    this.item.itemCode = code;
+    console.log(this.item.itemCode);
+  }
+
+  //getItemCode(){
+    //return this.item.itemCode;
+  //}
+
   onItemSubmit() {
     this.checkInService.addItem(this.item);
-    this.item = new Item('', undefined, '', '', undefined, undefined, false);
+    this.item = new Item('', undefined, undefined, '', undefined, undefined, false);
   }
+
+
 
   scanBarcode() {
     console.log("Take picture of barcode");
@@ -44,7 +59,7 @@ export class CheckInItemComponent {
   Check first row in table on HTML
   Inserting that call makes the website time out
   */
-  @Output() descript = new EventEmitter();
+  //@Output() descript = new EventEmitter();
 
   //onDescript() {
       //window.alert('Button selected correctly -- #FIXME push this info into the description box');
