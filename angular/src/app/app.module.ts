@@ -29,7 +29,7 @@ import { BarcodeScannerComponent } from './dialog/barcode-scanner/barcode-scanne
     CheckInItemComponent,
     CheckInFinalizeComponent,
     DashboardComponent,
-    BarcodeScannerComponent
+    BarcodeScannerComponent,
   ],
   imports: [
     BrowserModule,

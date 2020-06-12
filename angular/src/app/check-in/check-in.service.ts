@@ -14,7 +14,7 @@ export class CheckInService {
 
   seller = new Seller('', '', '', '', '', '');
 
-  item = new Item('', undefined, '', '', undefined, undefined, false);
+  item = new Item('', undefined, undefined,'', undefined, undefined, false);
 
   items: Item[] = [];
 

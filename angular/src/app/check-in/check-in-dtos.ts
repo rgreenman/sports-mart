@@ -14,8 +14,8 @@ export class Item {
 	constructor (
 		public name: string,
 		public price: number,
+		public itemCode: number,
 		public category: string,
-		public description: string,
 		public barcode: number,
 		public sellerId: number,
 		public sold: boolean,
