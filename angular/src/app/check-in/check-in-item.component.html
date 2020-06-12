@@ -1,6 +1,39 @@
 <section> Seller's Items
 	<form (ngSubmit)="onItemSubmit()" #sellersItems="ngForm">
-		<div id="description_table" style=" float:right!important;">
+		
+		<div>
+			<label for="name">Name</label>
+			<input type="text" id="name" required [(ngModel)]="item.name" name="name">
+		</div>
+		<div>
+			<label for="price">Price</label>
+			<input type="text" id="price" required [(ngModel)]="item.price" name="price">
+		</div>
+		<div>
+			<label for="itemCode">Item Code</label>
+			<input type="text" id="itemCode" required [(ngModel)]="item.itemCode" name="itemCode">
+		</div>
+		<div>
+			<label for="category">Category</label>
+			<select id="category"
+                required
+                [(ngModel)]="item.category" name="category"
+                #category="ngModel">
+          <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+        </select>
+		</div>
+		<div>
+			<label for="barcode">Barcode</label>
+			<button type="button" class="button" (click)="scanBarcode()">Scan Barcode</button>
+			<input type="text" id="barcode" required [(ngModel)]="item.barcode" disabled="true" name="barcode">
+		</div>
+
+		<button type="button" (click)="sellersItems.reset()">Clear</button>
+		<button type="submit" [disabled]="!sellersItems.form.valid">Submit</button>
+	</form>
+</section>
+
+<div id="description_table" style=" float:right!important;">
 		<table style="width: 25%"> 
 			<tr>
 				<th>Item Code</th>
@@ -89,37 +122,6 @@
 		</table>
 		
 	</div>
-		<div>
-			<label for="name">Name</label>
-			<input type="text" id="name" required [(ngModel)]="item.name" name="name">
-		</div>
-		<div>
-			<label for="price">Price</label>
-			<input type="text" id="price" required [(ngModel)]="item.price" name="price">
-		</div>
-		<div>
-			<label for="itemCode">Item Code</label>
-			<input type="text" id="itemCode" required [(ngModel)]="item.itemCode" name="itemCode">
-		</div>
-		<div>
-			<label for="category">Category</label>
-			<select id="category"
-                required
-                [(ngModel)]="item.category" name="category"
-                #category="ngModel">
-          <option *ngFor="let category of categories" [value]="category">{{category}}</option>
-        </select>
-		</div>
-		<div>
-			<label for="barcode">Barcode</label>
-			<button type="button" class="button" (click)="scanBarcode()">Scan Barcode</button>
-			<input type="text" id="barcode" required [(ngModel)]="item.barcode" disabled="true" name="barcode">
-		</div>
-
-		<button type="button" (click)="sellersItems.reset()">Clear</button>
-		<button type="submit" [disabled]="!sellersItems.form.valid">Submit</button>
-	</form>
-</section>
 
 <button type="button" routerLink="../check-in-seller">Previous
 </button>
