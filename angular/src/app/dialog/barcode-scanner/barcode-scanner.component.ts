@@ -15,7 +15,7 @@ barecodeScanner: ZXingScannerModule;
 barcodeValue: number = 0;
   constructor(public activeModal: NgbActiveModal,) { }
 
-    dispatchScanSuccess(result) {
-        this.barcodeValue = result;
+    dispatchScanSuccess(barcodeValue) {
+    	this.activeModal.close(barcodeValue);
     }
 }

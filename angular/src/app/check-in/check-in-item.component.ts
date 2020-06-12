@@ -31,13 +31,10 @@ export class CheckInItemComponent {
     const modalRef = this.modalService.open(BarcodeScannerComponent);
 
     modalRef.result.then((barcode) => {
-
+      this.item.barcode = barcode;
     }, (reject) => {
 
     }); 
-
-    
-
   }
   /*
   Cannot get this to work. Trying to make the click input into the description.
