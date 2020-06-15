@@ -1,6 +1,7 @@
 
 export class Seller {
 	constructor (
+		public vendorId: number,
 		public name: string,
 		public phoneNumber: string,
 		public streetAddress: string,
@@ -12,7 +13,7 @@ export class Seller {
 
 export class Item {
 	constructor (
-		public name: string,
+		public tagId: number,
 		public price: number,
 		public itemCode: number,
 		public category: string,

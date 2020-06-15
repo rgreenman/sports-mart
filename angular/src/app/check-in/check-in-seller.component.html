@@ -1,6 +1,10 @@
 <section> Seller's Information
 	<form (ngSubmit)="onSellerSubmit()" #sellersInformationForm="ngForm">
 		<div>
+			<label for="vendorID">Vendor Number</label>
+			<input type="text" id = vendorID required [(ngModel)]="seller.vendorId" name="vendorID">
+		</div>
+		<div>
 			<label for="name">Name</label>
 			<input type="text" id="name" required [(ngModel)]="seller.name" name="name">
 		</div>

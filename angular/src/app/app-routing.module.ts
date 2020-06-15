@@ -7,6 +7,8 @@ import { CheckInItemComponent } from './check-in/check-in-item.component';
 import { CheckInFinalizeComponent } from './check-in/check-in-finalize.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CashOutComponent } from './cash-out/cash-out.component';
+import { PosHomeComponent } from './checkout/pos-home.component';
+import { PosSelectionComponent } from './checkout/pos-selection.component';
 
 
 
@@ -24,7 +26,14 @@ const routes: Routes = [
       {path: 'check-in-finalize', component: CheckInFinalizeComponent },
     ]
   },
-	{ path: 'checkout', component: CheckoutComponent },
+	{ path: 'checkout', 
+	component: CheckoutComponent, 
+	children: [
+		{path: '', redirectTo: 'pos-home', pathMatch: 'full'},
+		{path: 'pos-home', component: PosHomeComponent},
+		{path: 'pos-selection', component: PosSelectionComponent},
+		]
+	},
 	{ path: 'cash-out', component: CashOutComponent },
 ];
 

@@ -24,22 +24,15 @@ export class CheckInItemComponent {
 
    item = this.checkInService.getItem();
 
-  selectItemCode(code) {
-    console.log('Hit');
+  selectItemCode(code, name) {
     this.item.itemCode = code;
-    console.log(this.item.itemCode);
+    this.item.category = name;
   }
-
-  //getItemCode(){
-    //return this.item.itemCode;
-  //}
 
   onItemSubmit() {
     this.checkInService.addItem(this.item);
-    this.item = new Item('', undefined, undefined, '', undefined, undefined, false);
+    this.item = new Item(undefined, undefined, undefined, '', undefined, undefined, false);
   }
-
-
 
   scanBarcode() {
     console.log("Take picture of barcode");
@@ -51,14 +44,4 @@ export class CheckInItemComponent {
 
     }); 
   }
-  /*
-  Cannot get this to work. Trying to make the click input into the description.
-  Check first row in table on HTML
-  Inserting that call makes the website time out
-  */
-  //@Output() descript = new EventEmitter();
-
-  //onDescript() {
-      //window.alert('Button selected correctly -- #FIXME push this info into the description box');
-  //}
 }

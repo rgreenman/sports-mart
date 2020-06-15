@@ -18,6 +18,8 @@ import { CheckInFinalizeComponent } from './check-in/check-in-finalize.component
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BarcodeScannerComponent } from './dialog/barcode-scanner/barcode-scanner.component';
+import { PosSelectionComponent } from './checkout/pos-selection.component';
+import { PosHomeComponent } from './checkout/pos-home.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { BarcodeScannerComponent } from './dialog/barcode-scanner/barcode-scanne
     CheckInFinalizeComponent,
     DashboardComponent,
     BarcodeScannerComponent,
+    PosSelectionComponent,
+    PosHomeComponent,
   ],
   imports: [
     BrowserModule,
