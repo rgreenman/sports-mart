@@ -12,9 +12,9 @@ export class CheckInService {
   constructor() {
   }
 
-  seller = new Seller('', '', '', '', '', '');
+  seller = new Seller(undefined, '', '', '', '', '', '');
 
-  item = new Item('', undefined, undefined,'', undefined, undefined, false);
+  item = new Item(undefined, undefined, undefined,'', undefined, undefined, false);
 
   items: Item[] = [];
 

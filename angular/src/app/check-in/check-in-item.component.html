@@ -1,9 +1,9 @@
-<section> Seller's Items
-	<form (ngSubmit)="onItemSubmit()" #sellersItems="ngForm">
+<section> Seller's Items <!-- #FIXME doesn't align properly -->
+	<form (ngSubmit)="onItemSubmit()" #sellersItems="ngForm" style="float:left!important;">
 		
 		<div>
-			<label for="name">Name</label>
-			<input type="text" id="name" required [(ngModel)]="item.name" name="name">
+			<label for="name">Tag Number</label>
+			<input type="text" id="tagId" required [(ngModel)]="item.tagId" name="TagId">
 		</div>
 		<div>
 			<label for="price">Price</label>
@@ -42,79 +42,79 @@
 				<th>Descriptions</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(1)">1</button></td>
+				<td><button (click)="selectItemCode(1, 'DH SKI')">1</button></td>
 				<th>DH SKI</th>
-				<td><button (click)="selectItemCode(14)">14</button></td>
+				<td><button (click)="selectItemCode(14, 'HELMETS')">14</button></td>
 				<th>HELMETS</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(2)">2</button></td>
+				<td><button (click)="selectItemCode(2, 'DH BOOT')">2</button></td>
 				<th>DH BOOT</th>
-				<td><button (click)="selectItemCode(15)">15</button></td>
+				<td><button (click)="selectItemCode(15, 'CAMPING')">15</button></td>
 				<th>CAMPING</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(3)">3</button></td>
+				<td><button (click)="selectItemCode(3, 'XC SKI')">3</button></td>
 				<th>XC SKI</th>
-				<td><button (click)="selectItemCode(16)">16</button></td>
+				<td><button (click)="selectItemCode(16, 'BIKING')">16</button></td>
 				<th>BIKING</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(4)">4</button></td>
+				<td><button (click)="selectItemCode(4, 'XC SHOE')">4</button></td>
 				<th>XC SHOE</th>
-				<td><button (click)="selectItemCode(17)">17</button></td>
+				<td><button (click)="selectItemCode(17, 'GOLF')">17</button></td>
 				<th>GOLF</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(5)">5</button></td>
+				<td><button (click)="selectItemCode(5, 'SKI POLE')">5</button></td>
 				<th>SKI POLE</th>
-				<td><button (click)="selectItemCode(18)">18</button></td>
+				<td><button (click)="selectItemCode(18, 'BASEBALL')">18</button></td>
 				<th>BASEBALL</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(6)">6</button></td>
+				<td><button (click)="selectItemCode(6, 'SKI MISC')">6</button></td>
 				<th>SKI MISC</th>
-				<td><button (click)="selectItemCode(19)">19</button></td>
+				<td><button (click)="selectItemCode(19, 'LACROSSE')">19</button></td>
 				<th>LACROSSE</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(7)">7</button></td>
+				<td><button (click)="selectItemCode(7, 'SNOWBOARD')">7</button></td>
 				<th>SNOWBOARD</th>
-				<td><button (click)="selectItemCode(20)">20</button></td>
+				<td><button (click)="selectItemCode(20, 'SOCCER')">20</button></td>
 				<th>SOCCER</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(8)">8</button></td>
+				<td><button (click)="selectItemCode(8, 'SNOWBOARD BOOT')">8</button></td>
 				<th>SNOWBOARD BOOT</th>
-				<td><button (click)="selectItemCode(21)">21</button></td>
+				<td><button (click)="selectItemCode(21, 'EXERCISE EQUIPMENT')">21</button></td>
 				<th>EXERCISE EQUIPMENT</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(9)">9</button></td>
+				<td><button (click)="selectItemCode(9, 'SNOWBOARD MISC')">9</button></td>
 				<th>SNOWBOARD MISC</th>
-				<td><button (click)="selectItemCode(22)">22</button></td>
+				<td><button (click)="selectItemCode(22, 'CLOTHING')">22</button></td>
 				<th>CLOTHING</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(10)">10</button></td>
+				<td><button (click)="selectItemCode(10, 'FIGURE SKATES')">10</button></td>
 				<th>FIGURE SKATES</th>
-				<td><button (click)="selectItemCode(23)">23</button></td>
+				<td><button (click)="selectItemCode(23, 'GLOVES')">23</button></td>
 				<th>GLOVES</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(11)">11</button></td>
+				<td><button (click)="selectItemCode(11, 'HOCKEY SKATES')">11</button></td>
 				<th>HOCKEY SKATES</th>
-				<td><button (click)="selectItemCode(24)">24</button></td>
+				<td><button (click)="selectItemCode(24, 'SHOES')">24</button></td>
 				<th>SHOES</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(12)">12</button></td>
+				<td><button (click)="selectItemCode(12, 'HOCKEY MISC')">12</button></td>
 				<th>HOCKEY MISC</th>
-				<td><button (click)="selectItemCode(25)">25</button></td>
+				<td><button (click)="selectItemCode(25, 'MISC')">25</button></td>
 				<th>MISC</th>
 			</tr>
 			<tr>
-				<td><button (click)="selectItemCode(13)">13</button></td>
+				<td><button (click)="selectItemCode(13, 'ROLLER SKATES/BLADES')">13</button></td>
 				<th>ROLLER SKATES/BLADES</th>
 				<th>26</th>
 				<th>TBD</th>
