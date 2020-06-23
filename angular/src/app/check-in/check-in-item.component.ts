@@ -22,7 +22,8 @@ export class CheckInItemComponent {
   'GOLF', 'BASEBALL', 'LACROSSE', 'SOCCER', 'EXERCISE EQUIPMENT',
   'CLOTHING', 'GLOVES', 'SHOES', 'MISC'];
 
-   item = this.checkInService.getItem();
+  item = this.checkInService.getItem();
+  seller = this.checkInService.getSeller();
 
   selectItemCode(code, name) {
     this.item.itemCode = code;

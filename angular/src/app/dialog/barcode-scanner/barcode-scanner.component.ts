@@ -9,13 +9,16 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
 })
 export class BarcodeScannerComponent {
 
-@ViewChild(ZXingScannerModule)
-barecodeScanner: ZXingScannerModule;
+ @ViewChild('scanner', { static: false })
 
 barcodeValue: number = 0;
   constructor(public activeModal: NgbActiveModal,) { }
 
     dispatchScanSuccess(barcodeValue) {
     	this.activeModal.close(barcodeValue);
+    }
+
+    camerasFoundHandler(event) {
+    	//Need to test with IOS
     }
 }

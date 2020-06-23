@@ -1,20 +1,21 @@
-<section> Seller's Information
+<section>
+	<h6>Vendor Information</h6>
 	<form (ngSubmit)="onSellerSubmit()" #sellersInformationForm="ngForm">
 		<div>
 			<label for="vendorID">Vendor Number</label>
-			<input type="text" id = vendorID required [(ngModel)]="seller.vendorId" name="vendorID">
+			<input autofocus focus type="text" id = vendorID required [(ngModel)]="seller.vendorId" name="vendorID">
 		</div>
 		<div>
 			<label for="name">Name</label>
-			<input type="text" id="name" required [(ngModel)]="seller.name" name="name">
+			<input autofocus focus type="text" id="name" required [(ngModel)]="seller.name" name="name">
 		</div>
 
 		<div>
 			<label for="phoneNumber">Phone Number</label>
-			<input type="text" id="phoneNumber" required [(ngModel)]="seller.phoneNumber" name="phoneNumber">
+			<input autofocus focus type="text" id="phoneNumber" required [(ngModel)]="seller.phoneNumber" name="phoneNumber">
 		</div>
 
-		Address
+		<h6>Address</h6>
 		<div>
 			<label for="streetAddress">Street</label>
 			<input type="text" id="streetAddress" required [(ngModel)]="seller.streetAddress" name="streetAddress">

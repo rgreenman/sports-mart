@@ -1,1 +1,1 @@
-<zxing-scanner [formats]="['QR_CODE', 'EAN_13', 'CODE_128', 'DATA_MATRIX']" (scanSuccess)="dispatchScanSuccess($event)"></zxing-scanner>
+<zxing-scanner #scanner [formats]="['QR_CODE', 'EAN_13', 'CODE_128', 'DATA_MATRIX']" (camerasFound)="camerasFoundHandler($event)" (scanSuccess)="dispatchScanSuccess($event)"></zxing-scanner>

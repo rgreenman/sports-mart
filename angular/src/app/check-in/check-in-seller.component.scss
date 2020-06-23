@@ -1,0 +1,30 @@
+:host {
+	height: 100%;
+	> section {
+
+		> h6 {
+
+		}
+
+		> form {
+			width: 20%;
+			> div {
+				display: flex;
+				flex-direction: column;
+				padding-bottom: 5px;
+
+				> label {
+					margin: 0;
+				}
+
+				> input {
+
+				}
+			}
+
+			> h6 {
+				padding-top: 10px;
+			}
+		}
+	}
+}

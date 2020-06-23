@@ -21,6 +21,8 @@ import { BarcodeScannerComponent } from './dialog/barcode-scanner/barcode-scanne
 import { PosSelectionComponent } from './checkout/pos-selection.component';
 import { PosHomeComponent } from './checkout/pos-home.component';
 
+import { FocusDirective } from './directives/focus.directive'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,16 +36,17 @@ import { PosHomeComponent } from './checkout/pos-home.component';
     BarcodeScannerComponent,
     PosSelectionComponent,
     PosHomeComponent,
+    FocusDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ZXingScannerModule
+    ZXingScannerModule,
   ],
   entryComponents: [
-    BarcodeScannerComponent
+    BarcodeScannerComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

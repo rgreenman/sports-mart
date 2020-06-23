@@ -1,5 +1,8 @@
-<section> Seller's Items <!-- #FIXME doesn't align properly -->
-	<form (ngSubmit)="onItemSubmit()" #sellersItems="ngForm" style="float:left!important;">
+<section> 
+	<h6>
+		Seller {{seller.name}}, Vendor number {{seller.vendorId}}
+	</h6>
+	<form (ngSubmit)="onItemSubmit()" #sellersItems="ngForm">
 		
 		<div>
 			<label for="name">Tag Number</label>
@@ -31,10 +34,16 @@
 		<button type="button" (click)="sellersItems.reset()">Clear</button>
 		<button type="submit" [disabled]="!sellersItems.form.valid">Submit</button>
 	</form>
+	<div class='button-group'>
+		<button type="button" routerLink="../check-in-seller">Previous
+		</button>
+		<button type="button" routerLink="../check-in-finalize">Next
+		</button>
+	</div>
 </section>
 
-<div id="description_table" style=" float:right!important;">
-		<table style="width: 25%"> 
+<aside id="description_table">
+		<table> 
 			<tr>
 				<th>Item Code</th>
 				<th>Descriptions</th>
@@ -120,10 +129,4 @@
 				<th>TBD</th>
 			</tr>
 		</table>
-		
-	</div>
-
-<button type="button" routerLink="../check-in-seller">Previous
-</button>
-<button type="button" routerLink="../check-in-finalize">Next
-</button>
+	</aside>
